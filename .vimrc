@@ -17,8 +17,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'AlessandroYorba/Alduin'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-startify'
@@ -91,7 +91,7 @@ set statusline+=%*
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 let mapleader=','
 
@@ -127,7 +127,7 @@ let g:alduin_Shout_Become_Ethereal = 1
 "colorscheme alduin
 
 
-let g:airline_theme = 'luna'
+"let g:airline_theme = 'luna'
 
 "syntax on
 
@@ -156,6 +156,7 @@ set cursorline
 noremap K ddkkp
 noremap J ddp
 
+let g:dracula_colorterm=0
 filetype plugin on
 syntax on
 colorscheme dracula
@@ -175,7 +176,7 @@ set listchars=space:.
 highlight SpecialKey ctermfg=8
 
 let g:ctrlp_root_directory = "/Users/allen/Desktop/TRIBE-ROR"
-command Ror cd ~/Desktop/TRIBE-ROR
+command Api cd ~/Desktop/api.activepipe.com
 command Web cd ~/Desktop/TRIBE-ROR/frontend
 
 nnoremap zz :update<cr>
