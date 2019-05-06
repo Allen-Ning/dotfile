@@ -32,10 +32,11 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'racer-rust/vim-racer'
 Plugin 'ed-bassett/vim-embiggen'
 Plugin 'dracula/vim'
+Plugin 'mileszs/ack.vim'
 
 " TypeScript
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Quramy/tsuquyomi'
+"Plugin 'Shougo/vimproc.vim'
+"Plugin 'Quramy/tsuquyomi'
 
 
 " All of your Plugins must be added before the following line
@@ -185,3 +186,26 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+
+set cursorline!
+set lazyredraw
+set wrap
+
+"No beep
+set noeb vb t_vb=
+
+" rubocop
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_checkers = ['rubocop']
+
+let g:api="/Users/allen/Desktop/api.activepipe.com"
+
+:function Api(pattern)
+:  exec 'Ack! '. a:pattern . " " . g:api
+:endfunction
