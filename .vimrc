@@ -176,11 +176,7 @@ set list
 set listchars=space:.
 highlight SpecialKey ctermfg=8
 
-let g:ctrlp_root_directory = "/Users/allen/Desktop/TRIBE-ROR"
-command Api cd ~/Desktop/api.activepipe.com
-command Web cd ~/Desktop/TRIBE-ROR/frontend
-
-nnoremap zz :update<cr>
+nnoremap zz :w<cr>
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
